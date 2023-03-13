@@ -86,7 +86,7 @@ void intfrac(float n,int* inteiro, float* frac) {
 
    //f) q=&p --> inválida;
 
-   //g) i = (*p)+++*q --> inválida;
+   //g) i = (*p)+++*q --> ok;
 
 
 
