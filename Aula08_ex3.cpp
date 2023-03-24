@@ -23,7 +23,8 @@ int main() {
         cout << a[i] << " ";
     cout << endl << endl;
     bubbleSort(b,5);
-     cout << " Vetor : ";
+    cout << " Vetor : ";
+    cout << fixed << setprecision(2);
     for (int i = 0; i < 5; i++)
         cout << b[i] << " ";
     cout << endl << endl;
