@@ -118,14 +118,21 @@ int main () {
      /* Ex_01
     
     srand(time(NULL));
-    int v1[20];
+    long long v1[20];
     double v2[20];
-
-    gera(v1,100);
-    gera(v2,100.0);
+    long long f1;
+    double f2;
+    cout << "Digite o fator de inteiros: ";
+    cin >> f1;
+    cout << endl;
+    gera(v1,f1);
 
     imprimir(v1);
     cout << "Maior elemento do vetor: " << maximo(v1) << endl << endl;
+    cout << "Digite o fator de double: ";
+    cin >> f2;
+    cout << endl;
+    gera(v2,f2);
     imprimir(v2);
     cout << "Maior elemento do vetor: " << maximo(v2) << endl << endl;
     
