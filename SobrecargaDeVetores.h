@@ -18,6 +18,7 @@ class Vetor {
 		bool operator!=(const Vetor&) const; // desigualdade
 		int& operator[](int); //operador de subscrito no vetor
 		const Vetor& operator+(const Vetor&);
+		const Vetor& operator-(const Vetor&);
 		friend ostream& operator<<(ostream&, const Vetor&);
 		friend istream& operator>>(istream&, const Vetor&);
 
@@ -77,9 +78,27 @@ int& Vetor::operator[] (int indice) {
 }
 
 const Vetor& Vetor::operator+(const Vetor &direita) {
-	if(tamanho < direita.tamanho) {
-		
+	if(tamanho != direita.tamanho) {
+		delete[] ptr;
+		tamanho = direita.tamanho;
+		ptr = new int(tamanho);
 	}
+	for(int i = 0; i< tamanho; i++) {
+		ptr[i] = direita.ptr[i]+this->ptr[i];
+	}
+	return *this;
+}
+
+const Vetor& Vetor::operator-(const Vetor &direita) {
+	if(tamanho != direita.tamanho) {
+		delete[] ptr;
+		tamanho = direita.tamanho;
+		ptr = new int(tamanho);
+	}
+	for(int i = 0; i< tamanho; i++) {
+		ptr[i] = direita.ptr[i]-this->ptr[i];
+	}
+	return *this;
 }
 
 ostream& operator<<(ostream &saida, const Vetor &vet) {
