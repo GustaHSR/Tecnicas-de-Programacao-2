@@ -18,9 +18,20 @@ int main () {
 	cin >> A;
 	cout << "Vetor A: " << A << endl;
 
-	Vetor B;
+	Vetor B(3);
 	cout << "Tamanho de B: " << B.getTam() << endl;
 	cout << "Vetor B: " << B << endl;
+	cout << "Preencha o vetor B: ";
+	cin >> B;
+	cout <<endl;
+
+	cout << "Soma de A + B: ";
+	cout << A+B << endl;
+	
+	
+	
+	cout << "Subtração de A - B: ";
+	cout << A-B << endl;
 
 	
 }
