@@ -1,1 +1,1 @@
-# Exercícios de Tp2 que fiz na Puc Goias!
+# Exercícios de Técnicas de Programação 2 que fiz na Puc Goias!
